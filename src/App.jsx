@@ -6,7 +6,7 @@ import ScatterChart from "./components/ScatterChart";
 function App() {
   const [chartData, setChartData] = useState(null);
   useEffect(() => {
-    fetch("public/financial_data.json") // Fetching data from json file
+    fetch("/financial_data.json") // Fetching data from json file
       .then((response) => response.json())
       .then((data) => setChartData(data));
   }, []);
