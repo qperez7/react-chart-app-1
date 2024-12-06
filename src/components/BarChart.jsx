@@ -1,13 +1,18 @@
 import ChartComponent from "./ChartComponent.jsx";
+import PropTypes from "prop-types";
 const BarChart = ({ data }) => {
+  BarChart.propTypes = {
+    data: PropTypes.object.isRequired, // Adding props
+    options: PropTypes.object,
+  };
   const barChartData = {
     labels: data.months,
     datasets: [
       {
-        label: "Monthly Sales",
+        label: "Bar Chart",
         data: data.sales,
-        backgroundColor: "rgba(75, 192, 192, 0.5)",
-        borderColor: "rgba(75, 192, 192, 1)",
+        backgroundColor: "rgba(5, 0, 249, 0.5)", //Dark blue color
+        borderColor: "rgba(5, 0, 249, 1)",
         borderWidth: 1,
       },
     ],

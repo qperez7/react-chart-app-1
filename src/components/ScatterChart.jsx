@@ -1,14 +1,19 @@
 import ChartComponent from "./ChartComponent.jsx";
+import PropTypes from "prop-types";
 
 const ScatterChart = ({ data }) => {
+  ScatterChart.propTypes = {
+    // Adding props
+    data: PropTypes.object.isRequired,
+  };
   const scatterChartData = {
     labels: data.expenses,
     datasets: [
       {
-        label: "Expenses vs. Profits",
+        label: "Scatter Chart",
         data: data.profits,
-        backgroundColor: "rgba(75, 192, 192, 0.2)",
-        borderColor: "rgba(75, 192, 192, 1)",
+        backgroundColor: "rgba(245, 0, 9, 0.2)", //Red color
+        borderColor: "rgba(245, 0, 9, 1)",
         borderWidth: 1,
       },
     ],
