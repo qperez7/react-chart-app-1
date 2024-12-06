@@ -1,10 +1,10 @@
 import ChartComponent from "./ChartComponent.jsx";
-const BubbleChart = ({ data }) => {
-  const bubbleChartData = {
-    labels: data.expenses,
+const LineChart = ({ data }) => {
+  const lineChartData = {
+    labels: data.months,
     datasets: [
       {
-        label: "Combined Metrics",
+        label: "Monthly Profits",
         data: data.profits,
         backgroundColor: "rgba(75, 192, 192, 0.2)",
         borderColor: "rgba(75, 192, 192, 1)",
@@ -12,7 +12,7 @@ const BubbleChart = ({ data }) => {
       },
     ],
   };
-  const bubbleChartOptions = {
+  const lineChartOptions = {
     scales: {
       y: {
         beginAtZero: true,
@@ -21,10 +21,10 @@ const BubbleChart = ({ data }) => {
   };
   return (
     <ChartComponent
-      type="bubble"
-      data={bubbleChartData}
-      options={bubbleChartOptions}
+      type="line"
+      data={lineChartData}
+      options={lineChartOptions}
     />
   );
 };
-export default BubbleChart;
+export default LineChart;
