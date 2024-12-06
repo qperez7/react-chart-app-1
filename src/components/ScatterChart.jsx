@@ -1,4 +1,5 @@
 import ChartComponent from "./ChartComponent.jsx";
+
 const ScatterChart = ({ data }) => {
   const scatterChartData = {
     labels: data.expenses,
